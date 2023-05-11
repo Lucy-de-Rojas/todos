@@ -1,0 +1,40 @@
+.container {
+        display:flex ;
+        width: 95%;
+        margin-top: 10px;
+        justify-content: space-between;
+        align-items: flex-start;
+}
+
+
+
+.todos {
+        display: flex;
+        width: 47%;
+        background-color: rgb(108, 221, 108);
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+
+}
+
+
+@media (max-width: 600px) {
+        .todos {
+                width: 95%;
+                flex-direction: column;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+.remove {
+        background-color: rgb(225, 150, 150);
+}

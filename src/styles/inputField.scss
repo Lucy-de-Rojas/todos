@@ -9,7 +9,7 @@
 
 
 .input {
-        width: 90%;
+        width: 95%;
         position: relative;
         display: flex;
         align-items: center;
@@ -61,3 +61,8 @@
 
 
 
+@media (max-width:600px) {
+        .input {
+                width: 95%;
+        }
+}

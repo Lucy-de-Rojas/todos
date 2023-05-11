@@ -1,11 +1,16 @@
 import React from 'react'
 import { Todo } from '../model'
 
-import '../styles/displayTodos.scss';
+import '../styles/todos.scss';
+
+import SingleTodo from './singleTodo';
+
+
 
 
 interface Props {
         todos: Todo[];
+        setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 
 }
 
@@ -15,27 +20,50 @@ interface Props {
 
 
 
-const TodoList = ({todos}:Props) => {
+const TodoList = ({todos, setTodos}:Props) => {
   return (
-    <div>
-        <h1>To Dos:</h1>
+        <div className="container">
 
+    <div className='todos'>
+        <span>Active Tasks:</span>
 
-        {todos.map((item) => {
-                return <div key={item.id
+        {todos.map((todo) => {
+                return <div key={todo.id
                 }>
 
-                       <span className='todo'>
-                        {item.todo}
-                        </span>
 
-                        <span className='done'>
-                                ✅
-                        </span>
-
-
+        <SingleTodo
+                todo={todo}
+                key={todo.id}
+                todos={todos}
+                setTodos={setTodos} />
                         </div>
         })}
+
+        </div>  {/* end of todos */}
+
+        <div className="todos remove">
+        <span>Completed Tasks:</span>
+        {todos.map((todo) => {
+                return <div key={todo.id
+                }>
+
+
+        <SingleTodo
+                todo={todo}
+                key={todo.id}
+                todos={todos}
+                setTodos={setTodos} />
+                        </div>
+        })}
+
+
+
+
+
+        </div>
+
+
 
     </div>
   )

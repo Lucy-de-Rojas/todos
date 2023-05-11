@@ -20,7 +20,7 @@ interface Props {
 
 
 
-
+// 🟥🟥🟥
 const InputField:React.FC<Props> = ({todo, setTodo, todos,setTodos}) => {
 
 
@@ -28,18 +28,21 @@ const InputField:React.FC<Props> = ({todo, setTodo, todos,setTodos}) => {
 
 
 
-
+// 🟥
   function handleChange(event:React.SyntheticEvent) {
-    let value = event.target as HTMLInputElement;
-    setTodo(value.value);
+    console.clear();
+    console.log('change:',(event.target as HTMLInputElement).value )
+    setTodo((event.target as HTMLInputElement).value);
   }
 
 
+
+  // 🟥
   function handleSubmit(event:React.SyntheticEvent) {
     event.preventDefault();
     console.log('submitting', todo);
-    if(todo) {
 
+    if(todo) {
 
       let data:Todo = {
         todo: todo,

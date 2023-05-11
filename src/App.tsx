@@ -47,7 +47,7 @@ const App:React.FC = () => {
 
 
 
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} setTodos={setTodos}/>
 
 
 
