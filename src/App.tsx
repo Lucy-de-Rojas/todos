@@ -3,9 +3,10 @@ import './styles/App.scss';
 
 
 
+import { Todo } from './model';
 
 import InputField from './components/inputField';
-
+import DisplayTodos from './components/displayTodos';
 
 
 
@@ -17,6 +18,10 @@ import InputField from './components/inputField';
 
 
 const App:React.FC = () => {
+
+  const [todo, setTodo] = useState<string>('');
+
+  const [todos, setTodos] = useState<Todo[]>([]);
 
 
 
@@ -34,7 +39,17 @@ const App:React.FC = () => {
 
 
 
-      <InputField />
+      <InputField
+            todo={todo}
+            setTodo={setTodo}
+            todos={todos}
+            setTodos={setTodos}
+            />
+
+
+
+        <DisplayTodos todos={todos}/>
+
 
 
     </div>
