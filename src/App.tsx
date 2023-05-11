@@ -6,8 +6,7 @@ import './styles/App.scss';
 import { Todo } from './model';
 
 import InputField from './components/inputField';
-import DisplayTodos from './components/displayTodos';
-
+import TodoList from './components/todoList';
 
 
 
@@ -48,7 +47,7 @@ const App:React.FC = () => {
 
 
 
-        <DisplayTodos todos={todos}/>
+        <TodoList todos={todos}/>
 
 
 

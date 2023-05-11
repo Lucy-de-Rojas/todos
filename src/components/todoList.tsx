@@ -15,7 +15,7 @@ interface Props {
 
 
 
-const DisplayTodos = ({todos}:Props) => {
+const TodoList = ({todos}:Props) => {
   return (
     <div>
         <h1>To Dos:</h1>
@@ -41,4 +41,4 @@ const DisplayTodos = ({todos}:Props) => {
   )
 }
 
-export default DisplayTodos
+export default TodoList;

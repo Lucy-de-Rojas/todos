@@ -51,8 +51,8 @@ const InputField:React.FC<Props> = ({todo, setTodo, todos,setTodos}) => {
       setTodos([...todos, data]);
       setTodo('');
 
-      inputRef.current?.blur();
     }
+    inputRef.current?.blur();
   }
 
 
