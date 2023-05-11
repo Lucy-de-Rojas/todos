@@ -14,14 +14,14 @@ import TodoList from './components/todoList';
 
 
 
-
-
 const App:React.FC = () => {
 
   const [todo, setTodo] = useState<string>('');
 
   const [todos, setTodos] = useState<Todo[]>([]);
 
+
+  const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
 
 
 
@@ -33,6 +33,7 @@ const App:React.FC = () => {
 
 
   return (
+
     <div className="App">
       <span className='heading'>Taskify with sass</span>
 
@@ -47,11 +48,18 @@ const App:React.FC = () => {
 
 
 
-        <TodoList todos={todos} setTodos={setTodos}/>
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          completedTodos={completedTodos}
+          setCompletedTodos={setCompletedTodos}
+
+          />
 
 
 
     </div>
+
   );
 }
 

@@ -7,10 +7,11 @@ import SingleTodo from './singleTodo';
 
 
 
-
 interface Props {
         todos: Todo[];
         setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+        completedTodos: Todo[];
+        setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 
 }
 
@@ -20,11 +21,20 @@ interface Props {
 
 
 
-const TodoList = ({todos, setTodos}:Props) => {
+const TodoList = ({todos, setTodos, completedTodos, setCompletedTodos}:Props) => {
+
+
+
   return (
         <div className="container">
 
-    <div className='todos'>
+
+
+                 <div
+                        className='todos'
+                        >
+
+
         <span>Active Tasks:</span>
 
         {todos.map((todo) => {
@@ -40,7 +50,11 @@ const TodoList = ({todos, setTodos}:Props) => {
                         </div>
         })}
 
-        </div>  {/* end of todos */}
+      </div>
+
+
+
+
 
         <div className="todos remove">
         <span>Completed Tasks:</span>
