@@ -24,11 +24,17 @@
                 @include noBorders();
                 box-shadow: inset 2px 2px 10px black;
 
-
+                &:focus {
+                        box-shadow: 0 0 10px 1000px rgba(0,0,0,0.5);
+                }
         }
 
+
+
+
+
         .submit {
-                transition: 0.8s all;
+                transition: 1s all;
                 position:absolute;
                 right: 0;
                 padding: 15px;
